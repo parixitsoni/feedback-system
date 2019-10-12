@@ -17,12 +17,14 @@ state={
     this.setState({users: res.data, loading:false });
     console.log(this.state.users);
   }
+
+
   render(){ 
     return (
     <div className="App">
       <Navbar/>
         <div className='container'>
-              <Search />
+              <Search searchUsers={this.searchUsers}/>
              <Users loading={this.state.loading} users={this.state.users} />
         </div>
     </div>
