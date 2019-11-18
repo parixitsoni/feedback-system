@@ -3,8 +3,12 @@ import Navbar from './component/layout/NavBar';
 import Users from './component/users/Users';
 import Search from './component/users/search';
 import Alert from './component/layout/alert';
+import SideBar from './component/layout/sidenav';
+import SliderPage from './component/layout/slider';
+// import MDBIcon from './component/layout/mdbicon';
 import axios from 'axios';
 import './App.css';
+
 
 
 
@@ -34,22 +38,29 @@ state={
      this.setState({alert:{ msg,type }});
     
   
-  setTimeout ( ()=> this.setState({ alert:null }), 2000)
+  setTimeout ( ()=> this.setState({ alert:null }), 3000)
   };
 
   render(){ 
     const {users, loading } = this.state;
     return (      
     <div className="App">
- 
+       
+
+     
+      <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
       <Navbar/>
-   
         <div className='container'>
           <Alert alert={this.state.alert} />
             <Search searchUsers={this.searchUsers} clearUsers ={this.clearUsers} showClear={users.length > 0 ? true : false} setAlert={this.setAlert}/>
+                
+    
+                <SliderPage min={0} max={100} value={50} formClassName="w-100" />
+                
+
             <Users loading={loading} users={users} />
         </div>
-  
+      
     </div>
   );  
 }
