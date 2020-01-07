@@ -1,0 +1,21 @@
+   require 'config.php';
+    $json = json_decode(file_get_contents('php://input'), true);
+    // $sem_name=$json['sem_name'];
+    // $sem_query = "SELECT sem_name FROM s_login WHERE username='$username' and password='$password'"; 
+    // $sem_result = $db->query($sem_query);
+    // $semData = mysqli_fetch_all($sem_result,MYSQLI_ASSOC);
+    // $sem= $semData['sem_name'];
+    $sem_query = "SELECT sem_name FROM s_login WHERE username='$username' and password='$password'"; 
+    $sem_result = mysqli_query($db, $sem_query);
+    $row = mysqli_fetch_assoc($sem_result);
+    $sem=$row['sem_name'];
+    // $query = "SELECT * FROM `semester`";
+    $query = "SELECT `t1`,`t2`,`t3`,`t4`,`t5`,`t6`,`t7` FROM `semester`";
+
+    $result = $db->query($query); 
+    $feedData = mysqli_fetch_row($result);
+    // $feedData = mysqli_fetch_all($result,MYSQLI_ASSOC);
+    $temp=$feedData[0];
+    $feedData=json_encode($feedData);
+    echo $temp;
+    echo '{"feedData":'.$feedData.'}';
