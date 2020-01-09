@@ -1,5 +1,5 @@
 export function PostData(type, userData) {
-  let BaseURL = "http://remotemysql.com:3306/index.php";
+  let BaseURL = "https://remotemysql.com/databases.php";
   return new Promise((resolve, reject) => {
     fetch(BaseURL + "?tp=" + type, {
       method: "POST",
