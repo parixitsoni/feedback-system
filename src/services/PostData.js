@@ -1,5 +1,5 @@
 export function PostData(type, userData) {
-  let BaseURL = "https://remotemysql.com/phpmyadmin/index.php?db=C3SW7sDrmJ";
+  let BaseURL = "Database/php/react-php/api/index.php";
   return new Promise((resolve, reject) => {
     fetch(BaseURL + "?tp=" + type, {
       method: "POST",
