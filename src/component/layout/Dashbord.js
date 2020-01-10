@@ -24,7 +24,7 @@ class Dashbord extends Component {
   }
   function1(){
     axios
-      .post("http://localhost/react-php/api/index.php?tp=review", this.state)
+      .post("http://localhost/Database/php/react-php/api/index.php?tp=review", this.state)
       .then(res => {
         console.log(res);
         this.setState({  data:res.data.chartData});
@@ -35,7 +35,7 @@ class Dashbord extends Component {
   }
   function2(){
     axios
-      .post("http://localhost/react-php/api/index.php?tp=review1", this.state)
+      .post("http://localhost/Database/php/react-php/api/index.php?tp=review1", this.state)
       .then(res => {
         this.setState({  data1: res.data.chartData1 });
       })
@@ -45,7 +45,7 @@ class Dashbord extends Component {
   }
   function3(){
     axios
-      .post("http://localhost/react-php/api/index.php?tp=review2", this.state)
+      .post("http://localhost/Database/php/react-php/api/index.php?tp=review2", this.state)
       .then(res => {
         this.setState({  data2: res.data.chartData2  });
       })

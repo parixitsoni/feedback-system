@@ -30,7 +30,7 @@ const teachername = this.props.location.state.teachername;
 const semester = this.props.location.state.semester;
 
 if(this.state.value14 || this.state.value15 || this.state.value16 || this.state.value17 || this.state.value18) {
-  axios.post("http://localhost/react-php/api/index.php?tp=rate2", this.state)
+  axios.post("http://localhost/Database/php/react-php/api/index.php?tp=rate2", this.state)
   .then(res => {
     console.log(res)
     this.props.history.push('/Admin',{  teachername: teachername, semester: semester });  

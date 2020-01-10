@@ -34,7 +34,7 @@ const semester = this.props.location.state.semester;
 console.log(this.state)
 
 if(this.state.value6 || this.state.value7 || this.state.value8 || this.state.value9 || this.state.value10 || this.state.value11 || this.state.value12 || this.state.value13 ) {
-  axios.post("http://localhost/react-php/api/index.php?tp=rate1", this.state)
+  axios.post("http://localhost/Database/php/react-php/api/index.php?tp=rate1", this.state)
   .then(res => {
     console.log(res)
     this.props.history.push('/feed3',{ teachername: teachername,semester:semester });  
