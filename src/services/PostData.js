@@ -1,5 +1,5 @@
 export function PostData(type, userData) {
-  let BaseURL = "https://panelassess.netlify.com";
+  let BaseURL = "https://remotemysql.com/phpmyadmin/db_structure.php?server=1&db=C3SW7sDrmJ";
   return new Promise((resolve, reject) => {
     fetch(BaseURL + "?tp=" + type, {
       method: "POST",
