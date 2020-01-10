@@ -1,5 +1,5 @@
 export function PostData(type, userData) {
-  let BaseURL = "https://remotemysql.com/phpmyadmin/db_structure.php?server=1&db=C3SW7sDrmJ" + "https://github.com/parixitsoni/feedback-system/blob/master/src/Database/php/react-php/api/index.php";
+  let BaseURL = "remotemysql.com:3306";
   // let temp = ;
   return new Promise((resolve, reject) => {
     fetch(BaseURL + "?tp=" + type, {
