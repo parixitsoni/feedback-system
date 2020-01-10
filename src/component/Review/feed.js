@@ -33,7 +33,7 @@ const teachername = this.props.match.params.id;
 const semester = this.props.match.params.semester;
    
 if(this.state.value || this.state.value1 || this.state.value2 || this.state.value3 || this.state.value4 || this.state.value5 ) {    
-  axios.post("http://localhost/react-php/api/index.php?tp=rate", this.state)
+  axios.post("https://remotemysql.com/phpmyadmin/index.php?db=C3SW7sDrmJ/index.php?tp=rate", this.state)
   .then(res => {
      console.log(res)
         this.props.history.push('/feed2',{ teachername: teachername, semester:semester });  
