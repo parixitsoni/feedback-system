@@ -12,6 +12,7 @@ elseif($type=='review2') review2();
 
 function login() 
 { 
+    require 'config.php'; 
 //     $rest_json = file_get_contents("php://input");
 //     $_POST = json_decode($rest_json, true);
 //       $servername = "https://remotemysql.com:3306";
