@@ -12,7 +12,15 @@ elseif($type=='review2') review2();
 
 function login() 
 { 
-       require 'config.php'; 
+    $rest_json = file_get_contents("php://input");
+    $_POST = json_decode($rest_json, true);
+      $servername = "https://remotemysql.com/phpmyadmin/db_structure.php?server=1&db=C3SW7sDrmJ/";
+      $username = "C3SW7sDrmJ";
+      $password = "ux72fN5tCu";
+      $dbname = "C3SW7sDrmJ";
+    $db = new mysqli($servername, $username, $password, $dbname);
+ if(!$db) die("database connection error");
+
        $json = json_decode(file_get_contents('php://input'), true); 
        $un = $json['un']; $pwd = $json['pwd']; 
        $userData =''; 
@@ -138,7 +146,15 @@ function rate2(){
 
 function feed(){
     
-    require 'config.php';
+    $rest_json = file_get_contents("php://input");
+    $_POST = json_decode($rest_json, true);
+      $servername = "https://remotemysql.com/phpmyadmin/db_structure.php?server=1&db=C3SW7sDrmJ/";
+      $username = "C3SW7sDrmJ";
+      $password = "ux72fN5tCu";
+      $dbname = "C3SW7sDrmJ";
+    $db = new mysqli($servername, $username, $password, $dbname);
+ if(!$db) die("database connection error");
+
     $json = json_decode(file_get_contents('php://input'), true);
     $semester=$_POST['semester'];
     $query = "SELECT * FROM `semester`";
