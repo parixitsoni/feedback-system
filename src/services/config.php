@@ -1,7 +1,7 @@
 <?php
    $rest_json = file_get_contents("php://input");
    $_POST = json_decode($rest_json, true);
-     $servername = "https://remotemysql.com/phpmyadmin/db_structure.php?server=1&db=C3SW7sDrmJ/";
+     $servername = "https://remotemysql.com/phpmyadmin/index.php?db=C3SW7sDrmJ";
      $username = "C3SW7sDrmJ";
      $password = "ux72fN5tCu";
      $dbname = "C3SW7sDrmJ";
